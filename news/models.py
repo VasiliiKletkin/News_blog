@@ -1,4 +1,3 @@
-from pickle import NONE
 from django.db import models
 from taggit.managers import TaggableManager
 from django.contrib.auth import get_user_model
