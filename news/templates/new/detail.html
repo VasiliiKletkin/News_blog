@@ -1,29 +1,31 @@
 {% extends "base.html" %}
 {% load static %}
-{% block header %} {% endblock %}
+{% block header %} New {% endblock %}
 {% block title %} {% endblock %}
 {% block content %}
-    <div class="new-detail">
-        <h1>{{ new.title }}</h1>
-        <h6> <p class="text-end">{{ new.publish }}</a></h6>
-        <div class="new">
-                {% load thumbnail %}
-                {% thumbnail new.image "960x339" crop="center" upscale=True as im %}
-                <img class="card-img" src="{{ im.url }}">
-                {% endthumbnail %}
-            <h3>
-                {{ new.text }} 
-             </h3>
-            {% if new.tags %}
-                Tags:
-                    {% for tag in new.tags.all %}
-                        <a href="{% url "news:new_list_by_tag" tag.slug %}">
-                            {{ tag.name }}
-                        </a>
-                        {% if not forloop.last %}, {% endif %}
-                    {% endfor %}
-            {% endif %}
-        </div>
-
+<div class="new-detail">
+    <h1>{{ new.title }}</h1>
+    <h6>
+        <p class="text-end">{{ new.publish }}</p>
+    </h6>
+    <div class="new">
+        {% load thumbnail %}
+        {% thumbnail new.image "960x339" crop="center" upscale=True as im %}
+        <img class="card-img" src="{{ im.url }}">
+        {% endthumbnail %}
+        <h3>
+            {{ new.text }}
+        </h3>
+        {% if new.tags %}
+        Tags:
+        {% for tag in new.tags.all %}
+        <a href="{% url "news:new_list_by_tag" tag.slug %}">
+            {{ tag.name }}
+        </a>
+        {% if not forloop.last %}, {% endif %}
+        {% endfor %}
+        {% endif %}
     </div>
+
+</div>
 {% endblock %}
