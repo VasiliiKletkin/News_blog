@@ -44,13 +44,13 @@ Starting the django server:
 
 ### URL examples
 
- [Список всех новостей ```http://127.0.0.1:8000```](http://127.0.0.1:8000)
+ [List of all news ```http://127.0.0.1:8000```](http://127.0.0.1:8000)
  
- ```news/<int:pk>```         Новости по индентефикатору. [Пример ```http://127.0.0.1:8000/news/4```](http://127.0.0.1:8000/news/4)
+ ```news/<int:pk>``` News by id. [Example ```http://127.0.0.1:8000/news/4```](http://127.0.0.1:8000/news/4)
  
- ```tag/<slug:slug>```       Использование тега.         [Пример   ```http://127.0.0.1:8000/tag/weather```](http://127.0.0.1:8000/tag/weather)
+ ```tag/<slug:slug>``` Use of the tag. [Example ```http://127.0.0.1:8000/tag/weather```] (http://127.0.0.1:8000/tag/weather)
  
- ```analytics```             Аналитика просмотров.       [Пример```http://127.0.0.1:8000/analytics```](http://127.0.0.1:8000/analytics)
+ ```analytics``` View analytics. [Example```http://127.0.0.1:8000/analytics```](http://127.0.0.1:8000/analytics)
 
 ### API examples
 
