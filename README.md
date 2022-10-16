@@ -38,7 +38,7 @@ Python, Django, Git, Bootstrap, SQlite.
 ## Установка 
 Клонируем репозиторий на локальную машину:
 
-```$ git clone https://github.com/vkletkin/TEST_TASK_NEWS```
+```$ git clone https://github.com/vkletkin/News_blog```
 
  Создаем виртуальное окружение:
  
