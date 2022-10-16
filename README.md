@@ -54,13 +54,17 @@ Starting the django server:
 
 ### API examples
 
+```
+GET [api/v1/news/](http://127.0.0.1:8000/api/v1/news/) - Get a list of all news.
+With the specified limit and offset parameters, the output should work with pagination
+GET [api/v1/news/{id}](http://127.0.0.1:8000/api/v1/news/1/) - Get news by id
+DELETE [api/v1/news/{id}](http://127.0.0.1:8000/api/v1/news/1/) - Remove news by id
+PATCH [api/v1/news/{id}](http://127.0.0.1:8000/api/v1/news/1/) - Update news by id
+```
+
+in body
+
 ```bash
-GET [api/v1/news/](http://127.0.0.1:8000/api/v1/news/) - Получить список всех новостей.
-При указании параметров limit и offset выдача должна работать с пагинацией
-GET [api/v1/news/{id}](http://127.0.0.1:8000/api/v1/news/1/) - Получение новостей по id
-DELETE [api/v1/news/{id}](http://127.0.0.1:8000/api/v1/news/1/) - Удаление новости по id
-PATCH  [api/v1/news/{id}](http://127.0.0.1:8000/api/v1/news/1/) - Обновление новости по id
-в body :
 {
     "tags": null,
     "title": "",
