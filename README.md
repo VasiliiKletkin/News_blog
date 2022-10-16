@@ -22,7 +22,7 @@ Permissions are not installed, so every user can carry the update.
 ### Installation
 Clone the repository on the local machine:
 
-```$ git clone https://github.com/vkletkin/Market```
+```$ git clone https://github.com/vkletkin/News_blog```
 
  Create a virtual environment:
  
