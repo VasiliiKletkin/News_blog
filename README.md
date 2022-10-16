@@ -30,7 +30,7 @@ PATCH  [api/v1/news/{id}](http://127.0.0.1:8000/api/v1/news/1/) - Обновле
     "author": null,
     "views": []
  }
-
+```
 
 Проект был создан в учебных целях. Был использован стек:
 Python, Django, Git, Bootstrap, SQlite. 
