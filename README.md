@@ -1,9 +1,48 @@
 # News_blog
 
-## Описание
-На сайте можно просматривать новости(пристуствует фильтрация по тегу), реализована пагинация. Доступна аналитика просмотров моделей, без возможности накрутки.
-В панеле администратора, кроме стандартного набора возможностей, можно удалять, добавлять, редактировать. По api можно запрашивать, редактировать и добавлять новости. 
-Пермишены не установлены, поэтому обновление может вносить каждый пользователь.
+## Description
+
+On the site you can meet (there is a filtering of news by tag), implements pagination. Model view analytics is available, without the possibility of cheating.
+In the admin panel, in addition to the standard set of features, you can delete, add, significantly. By API, you can request, always and add news.
+Permissions are not installed, so every user can carry the update.
+
+---
+
+### Technologies:
+* Python
+* Django
+* Pytest
+* Git
+* html
+* Bootstrap
+* DRF
+
+---
+
+### Installation
+Clone the repository on the local machine:
+
+```$ git clone https://github.com/vkletkin/Market```
+
+ Create a virtual environment:
+ 
+ ```$ python -m venv venv```
+ 
+ Install dependencies:
+
+```$ pip install -r requirements.txt```
+
+Creating and applying migrations:
+
+```$ python manage.py makemigrations``` and  ```$ python manage.py migrate```
+
+Starting the django server:
+
+```$ python manage.py runserver```
+
+---
+
+### URL examples
 
  [Список всех новостей ```http://127.0.0.1:8000```](http://127.0.0.1:8000)
  
@@ -13,7 +52,8 @@
  
  ```analytics```             Аналитика просмотров.       [Пример```http://127.0.0.1:8000/analytics```](http://127.0.0.1:8000/analytics)
 
-API
+### API examples
+
 ```bash
 GET [api/v1/news/](http://127.0.0.1:8000/api/v1/news/) - Получить список всех новостей.
 При указании параметров limit и offset выдача должна работать с пагинацией
@@ -31,27 +71,3 @@ PATCH  [api/v1/news/{id}](http://127.0.0.1:8000/api/v1/news/1/) - Обновле
     "views": []
  }
 ```
-
-Проект был создан в учебных целях. Был использован стек:
-Python, Django, Git, Bootstrap, SQlite. 
-
-## Установка 
-Клонируем репозиторий на локальную машину:
-
-```$ git clone https://github.com/vkletkin/News_blog```
-
- Создаем виртуальное окружение:
- 
- ```$ python -m venv venv```
- 
- Устанавливаем зависимости:
-
-```$ pip install -r requirements.txt```
-
-Создание и применение миграций:
-
-```$ python manage.py makemigrations``` и ```$ python manage.py migrate```
-
-Запускаем django сервер:
-
-```$ python manage.py runserver```
